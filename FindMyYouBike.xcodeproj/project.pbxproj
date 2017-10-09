@@ -1,0 +1,520 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6C30AB9B1F8B6F3C00602DC5 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C30AB991F8B6F3C00602DC5 /* Reachability.m */; };
+		6C5027091F8A6E8C00D80D37 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C5027081F8A6E8C00D80D37 /* MessageUI.framework */; };
+		6C5A18AF1F8A1BF800DD8A2C /* ProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C5A18AE1F8A1BF800DD8A2C /* ProfileTableViewController.m */; };
+		6C5A18B21F8A1EEA00DD8A2C /* MapTypeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C5A18B11F8A1EEA00DD8A2C /* MapTypeTableViewCell.m */; };
+		6C6F05F11F84986E00E36C6B /* BikeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F05F01F84986E00E36C6B /* BikeModel.m */; };
+		6C6F05F41F849C0200E36C6B /* BikeLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F05F31F849C0200E36C6B /* BikeLocationManager.m */; };
+		6C6F05F81F84F8A900E36C6B /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F05F71F84F8A900E36C6B /* DetailViewController.m */; };
+		6C6F05FE1F8504D700E36C6B /* CustomAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F05FD1F8504D700E36C6B /* CustomAnnotationView.m */; };
+		6C6F06011F85054700E36C6B /* CustomPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F06001F85054700E36C6B /* CustomPointAnnotation.m */; };
+		6C6F06271F87648000E36C6B /* LisetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F06261F87648000E36C6B /* LisetViewController.m */; };
+		6C6F062E1F879A5500E36C6B /* ListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F062D1F879A5500E36C6B /* ListTableViewCell.m */; };
+		6CDF5ECA1F848FF100B04EC4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDF5EC91F848FF100B04EC4 /* AppDelegate.m */; };
+		6CDF5ECD1F848FF100B04EC4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDF5ECC1F848FF100B04EC4 /* ViewController.m */; };
+		6CDF5ED01F848FF100B04EC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CDF5ECE1F848FF100B04EC4 /* Main.storyboard */; };
+		6CDF5ED21F848FF100B04EC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CDF5ED11F848FF100B04EC4 /* Assets.xcassets */; };
+		6CDF5ED51F848FF100B04EC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CDF5ED31F848FF100B04EC4 /* LaunchScreen.storyboard */; };
+		6CDF5ED81F848FF100B04EC4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDF5ED71F848FF100B04EC4 /* main.m */; };
+		6CDF5EE01F84900B00B04EC4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CDF5EDF1F84900B00B04EC4 /* MapKit.framework */; };
+		6CDF5EE21F84901100B04EC4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CDF5EE11F84901100B04EC4 /* CoreLocation.framework */; };
+		D17BF7A3427BA372BE10BE2F /* libPods-FindMyYouBike.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B1BA0DD979DF9797867576F /* libPods-FindMyYouBike.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1B1BA0DD979DF9797867576F /* libPods-FindMyYouBike.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FindMyYouBike.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C5A33FBCCEF8EFF96328549 /* Pods-FindMyYouBike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyYouBike.release.xcconfig"; path = "Pods/Target Support Files/Pods-FindMyYouBike/Pods-FindMyYouBike.release.xcconfig"; sourceTree = "<group>"; };
+		6C30AB991F8B6F3C00602DC5 /* Reachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		6C30AB9A1F8B6F3C00602DC5 /* Reachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		6C5027081F8A6E8C00D80D37 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		6C5A18AD1F8A1BF800DD8A2C /* ProfileTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileTableViewController.h; sourceTree = "<group>"; };
+		6C5A18AE1F8A1BF800DD8A2C /* ProfileTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileTableViewController.m; sourceTree = "<group>"; };
+		6C5A18B01F8A1EEA00DD8A2C /* MapTypeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapTypeTableViewCell.h; sourceTree = "<group>"; };
+		6C5A18B11F8A1EEA00DD8A2C /* MapTypeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapTypeTableViewCell.m; sourceTree = "<group>"; };
+		6C6F05EF1F84986E00E36C6B /* BikeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BikeModel.h; sourceTree = "<group>"; };
+		6C6F05F01F84986E00E36C6B /* BikeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BikeModel.m; sourceTree = "<group>"; };
+		6C6F05F21F849C0100E36C6B /* BikeLocationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BikeLocationManager.h; sourceTree = "<group>"; };
+		6C6F05F31F849C0200E36C6B /* BikeLocationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BikeLocationManager.m; sourceTree = "<group>"; };
+		6C6F05F61F84F8A900E36C6B /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		6C6F05F71F84F8A900E36C6B /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		6C6F05FC1F8504D700E36C6B /* CustomAnnotationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomAnnotationView.h; sourceTree = "<group>"; };
+		6C6F05FD1F8504D700E36C6B /* CustomAnnotationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotationView.m; sourceTree = "<group>"; };
+		6C6F05FF1F85054700E36C6B /* CustomPointAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomPointAnnotation.h; sourceTree = "<group>"; };
+		6C6F06001F85054700E36C6B /* CustomPointAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomPointAnnotation.m; sourceTree = "<group>"; };
+		6C6F06251F87648000E36C6B /* LisetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LisetViewController.h; sourceTree = "<group>"; };
+		6C6F06261F87648000E36C6B /* LisetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LisetViewController.m; sourceTree = "<group>"; };
+		6C6F062C1F879A5500E36C6B /* ListTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListTableViewCell.h; sourceTree = "<group>"; };
+		6C6F062D1F879A5500E36C6B /* ListTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListTableViewCell.m; sourceTree = "<group>"; };
+		6CDF5EC51F848FF100B04EC4 /* FindMyYouBike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindMyYouBike.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CDF5EC81F848FF100B04EC4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6CDF5EC91F848FF100B04EC4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6CDF5ECB1F848FF100B04EC4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6CDF5ECC1F848FF100B04EC4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6CDF5ECF1F848FF100B04EC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6CDF5ED11F848FF100B04EC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6CDF5ED41F848FF100B04EC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6CDF5ED61F848FF100B04EC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CDF5ED71F848FF100B04EC4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6CDF5EDF1F84900B00B04EC4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		6CDF5EE11F84901100B04EC4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		931CEB7D01B2A647DF9C1023 /* Pods-FindMyYouBike.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyYouBike.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FindMyYouBike/Pods-FindMyYouBike.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6CDF5EC21F848FF000B04EC4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C5027091F8A6E8C00D80D37 /* MessageUI.framework in Frameworks */,
+				6CDF5EE21F84901100B04EC4 /* CoreLocation.framework in Frameworks */,
+				6CDF5EE01F84900B00B04EC4 /* MapKit.framework in Frameworks */,
+				D17BF7A3427BA372BE10BE2F /* libPods-FindMyYouBike.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F8090DE910C65ED3BB15326 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				931CEB7D01B2A647DF9C1023 /* Pods-FindMyYouBike.debug.xcconfig */,
+				4C5A33FBCCEF8EFF96328549 /* Pods-FindMyYouBike.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6C6F06021F85169500E36C6B /* CustomAnnotation */ = {
+			isa = PBXGroup;
+			children = (
+				6C6F05FC1F8504D700E36C6B /* CustomAnnotationView.h */,
+				6C6F05FD1F8504D700E36C6B /* CustomAnnotationView.m */,
+				6C6F05FF1F85054700E36C6B /* CustomPointAnnotation.h */,
+				6C6F06001F85054700E36C6B /* CustomPointAnnotation.m */,
+			);
+			path = CustomAnnotation;
+			sourceTree = "<group>";
+		};
+		6C6F06281F877D1A00E36C6B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6C30AB9A1F8B6F3C00602DC5 /* Reachability.h */,
+				6C30AB991F8B6F3C00602DC5 /* Reachability.m */,
+				6C6F05EF1F84986E00E36C6B /* BikeModel.h */,
+				6C6F05F01F84986E00E36C6B /* BikeModel.m */,
+				6C6F05F21F849C0100E36C6B /* BikeLocationManager.h */,
+				6C6F05F31F849C0200E36C6B /* BikeLocationManager.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6C6F06291F877D2B00E36C6B /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				6CDF5EC81F848FF100B04EC4 /* AppDelegate.h */,
+				6CDF5EC91F848FF100B04EC4 /* AppDelegate.m */,
+				6CDF5ED11F848FF100B04EC4 /* Assets.xcassets */,
+				6CDF5ED31F848FF100B04EC4 /* LaunchScreen.storyboard */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		6C6F062A1F877D3D00E36C6B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6CDF5ECE1F848FF100B04EC4 /* Main.storyboard */,
+				6C5A18B01F8A1EEA00DD8A2C /* MapTypeTableViewCell.h */,
+				6C5A18B11F8A1EEA00DD8A2C /* MapTypeTableViewCell.m */,
+				6C6F062C1F879A5500E36C6B /* ListTableViewCell.h */,
+				6C6F062D1F879A5500E36C6B /* ListTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6C6F062B1F877D4E00E36C6B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6CDF5ECB1F848FF100B04EC4 /* ViewController.h */,
+				6CDF5ECC1F848FF100B04EC4 /* ViewController.m */,
+				6C6F05F61F84F8A900E36C6B /* DetailViewController.h */,
+				6C6F05F71F84F8A900E36C6B /* DetailViewController.m */,
+				6C6F06251F87648000E36C6B /* LisetViewController.h */,
+				6C6F06261F87648000E36C6B /* LisetViewController.m */,
+				6C5A18AD1F8A1BF800DD8A2C /* ProfileTableViewController.h */,
+				6C5A18AE1F8A1BF800DD8A2C /* ProfileTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6CDF5EBC1F848FF000B04EC4 = {
+			isa = PBXGroup;
+			children = (
+				6CDF5EC71F848FF100B04EC4 /* FindMyYouBike */,
+				6CDF5EC61F848FF100B04EC4 /* Products */,
+				6CDF5EDE1F84900B00B04EC4 /* Frameworks */,
+				1F8090DE910C65ED3BB15326 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		6CDF5EC61F848FF100B04EC4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6CDF5EC51F848FF100B04EC4 /* FindMyYouBike.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6CDF5EC71F848FF100B04EC4 /* FindMyYouBike */ = {
+			isa = PBXGroup;
+			children = (
+				6CDF5ED61F848FF100B04EC4 /* Info.plist */,
+				6CDF5ED71F848FF100B04EC4 /* main.m */,
+				6C6F06021F85169500E36C6B /* CustomAnnotation */,
+				6C6F06291F877D2B00E36C6B /* Other */,
+				6C6F062B1F877D4E00E36C6B /* Controller */,
+				6C6F06281F877D1A00E36C6B /* Model */,
+				6C6F062A1F877D3D00E36C6B /* View */,
+			);
+			path = FindMyYouBike;
+			sourceTree = "<group>";
+		};
+		6CDF5EDE1F84900B00B04EC4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C5027081F8A6E8C00D80D37 /* MessageUI.framework */,
+				6CDF5EE11F84901100B04EC4 /* CoreLocation.framework */,
+				6CDF5EDF1F84900B00B04EC4 /* MapKit.framework */,
+				1B1BA0DD979DF9797867576F /* libPods-FindMyYouBike.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6CDF5EC41F848FF000B04EC4 /* FindMyYouBike */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6CDF5EDB1F848FF100B04EC4 /* Build configuration list for PBXNativeTarget "FindMyYouBike" */;
+			buildPhases = (
+				52472D601A9FCFB54A4AF3E4 /* [CP] Check Pods Manifest.lock */,
+				6CDF5EC11F848FF000B04EC4 /* Sources */,
+				6CDF5EC21F848FF000B04EC4 /* Frameworks */,
+				6CDF5EC31F848FF000B04EC4 /* Resources */,
+				FBC658DAD5D778900AFB0C24 /* [CP] Embed Pods Frameworks */,
+				46AD131DF55A92DF6A0F5AE2 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FindMyYouBike;
+			productName = FindMyYouBike;
+			productReference = 6CDF5EC51F848FF100B04EC4 /* FindMyYouBike.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6CDF5EBD1F848FF000B04EC4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = Nick;
+				TargetAttributes = {
+					6CDF5EC41F848FF000B04EC4 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 6CDF5EC01F848FF000B04EC4 /* Build configuration list for PBXProject "FindMyYouBike" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6CDF5EBC1F848FF000B04EC4;
+			productRefGroup = 6CDF5EC61F848FF100B04EC4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6CDF5EC41F848FF000B04EC4 /* FindMyYouBike */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6CDF5EC31F848FF000B04EC4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CDF5ED51F848FF100B04EC4 /* LaunchScreen.storyboard in Resources */,
+				6CDF5ED21F848FF100B04EC4 /* Assets.xcassets in Resources */,
+				6CDF5ED01F848FF100B04EC4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		46AD131DF55A92DF6A0F5AE2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FindMyYouBike/Pods-FindMyYouBike-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		52472D601A9FCFB54A4AF3E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FBC658DAD5D778900AFB0C24 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FindMyYouBike/Pods-FindMyYouBike-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6CDF5EC11F848FF000B04EC4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C30AB9B1F8B6F3C00602DC5 /* Reachability.m in Sources */,
+				6CDF5ECD1F848FF100B04EC4 /* ViewController.m in Sources */,
+				6C6F05F41F849C0200E36C6B /* BikeLocationManager.m in Sources */,
+				6C6F06011F85054700E36C6B /* CustomPointAnnotation.m in Sources */,
+				6CDF5ED81F848FF100B04EC4 /* main.m in Sources */,
+				6C6F05F11F84986E00E36C6B /* BikeModel.m in Sources */,
+				6C5A18AF1F8A1BF800DD8A2C /* ProfileTableViewController.m in Sources */,
+				6C6F05FE1F8504D700E36C6B /* CustomAnnotationView.m in Sources */,
+				6C6F06271F87648000E36C6B /* LisetViewController.m in Sources */,
+				6C5A18B21F8A1EEA00DD8A2C /* MapTypeTableViewCell.m in Sources */,
+				6CDF5ECA1F848FF100B04EC4 /* AppDelegate.m in Sources */,
+				6C6F05F81F84F8A900E36C6B /* DetailViewController.m in Sources */,
+				6C6F062E1F879A5500E36C6B /* ListTableViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6CDF5ECE1F848FF100B04EC4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6CDF5ECF1F848FF100B04EC4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6CDF5ED31F848FF100B04EC4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6CDF5ED41F848FF100B04EC4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6CDF5ED91F848FF100B04EC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6CDF5EDA1F848FF100B04EC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6CDF5EDC1F848FF100B04EC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 931CEB7D01B2A647DF9C1023 /* Pods-FindMyYouBike.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 93QT5L8PP6;
+				INFOPLIST_FILE = FindMyYouBike/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Nick.FindMyYouBike;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6CDF5EDD1F848FF100B04EC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C5A33FBCCEF8EFF96328549 /* Pods-FindMyYouBike.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 93QT5L8PP6;
+				INFOPLIST_FILE = FindMyYouBike/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Nick.FindMyYouBike;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6CDF5EC01F848FF000B04EC4 /* Build configuration list for PBXProject "FindMyYouBike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CDF5ED91F848FF100B04EC4 /* Debug */,
+				6CDF5EDA1F848FF100B04EC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6CDF5EDB1F848FF100B04EC4 /* Build configuration list for PBXNativeTarget "FindMyYouBike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CDF5EDC1F848FF100B04EC4 /* Debug */,
+				6CDF5EDD1F848FF100B04EC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6CDF5EBD1F848FF000B04EC4 /* Project object */;
+}
