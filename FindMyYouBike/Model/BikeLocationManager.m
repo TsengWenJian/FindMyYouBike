@@ -100,7 +100,6 @@
 
 -(NSArray*)sortedBikesWithDistance:(NSArray *)bikes{
     NSArray * myArray = [NSArray new];
-    
     myArray = [bikes sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
         BikeModel * bike1 = obj1;
         BikeModel * bike2 = obj2;
