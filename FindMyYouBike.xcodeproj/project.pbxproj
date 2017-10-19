@@ -130,6 +130,7 @@
 		6C6F062A1F877D3D00E36C6B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6C6F06021F85169500E36C6B /* CustomAnnotation */,
 				6CDF5ECE1F848FF100B04EC4 /* Main.storyboard */,
 				6C5A18B01F8A1EEA00DD8A2C /* MapTypeTableViewCell.h */,
 				6C5A18B11F8A1EEA00DD8A2C /* MapTypeTableViewCell.m */,
@@ -177,7 +178,6 @@
 			children = (
 				6CDF5ED61F848FF100B04EC4 /* Info.plist */,
 				6CDF5ED71F848FF100B04EC4 /* main.m */,
-				6C6F06021F85169500E36C6B /* CustomAnnotation */,
 				6C6F06291F877D2B00E36C6B /* Other */,
 				6C6F062B1F877D4E00E36C6B /* Controller */,
 				6C6F06281F877D1A00E36C6B /* Model */,

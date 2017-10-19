@@ -12,7 +12,6 @@
 
 typedef void (^DoneHandle)(NSError *error);
 
-
 @interface BikeLocationManager : NSObject
 
 @property(strong,nonatomic) NSMutableArray* bikes;

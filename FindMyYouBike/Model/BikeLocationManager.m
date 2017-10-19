@@ -57,21 +57,22 @@
 
 
 -(void)getAllBikeLocation:(DoneHandle) done{
+   
     
-
     if(!manager)
     {
         manager = [AFHTTPSessionManager manager];
         manager.requestSerializer = [AFJSONRequestSerializer serializer];
         manager.responseSerializer = [AFJSONResponseSerializer serializer];
+        
     }
-
+   
     NSDictionary *dict = @{@"limit":@"1000"};
     NSURL *URL = [NSURL URLWithString:YOUBIKE_URL];
     [manager GET:URL.absoluteString parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         [_bikes removeAllObjects];
-        NSLog(@"------getAllBikeLocation--------");
+        
         
         if([responseObject isKindOfClass:[NSDictionary class]]){
             
@@ -94,8 +95,6 @@
         done(error);
 
     }];
-    
-
 }
 
 -(NSArray*)sortedBikesWithDistance:(NSArray *)bikes{

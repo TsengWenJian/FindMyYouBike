@@ -26,11 +26,12 @@
     DetailViewController *detailVC;
     LisetViewController *listVC;
     ProfileTableViewController * profileVC ;
-    BOOL isShowListVC;
-    BOOL isShowProfileVC;
-    BOOL isShowDetailVC;
+    BOOL isShowListView;
+    BOOL isShowProfileView;
+    BOOL isShowDetailView;
     Reachability *youBikesReach;
-    NSLock * lock;
+    NSLock *refreshLock;
+    
 }
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *detailContainerTop;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
@@ -78,6 +79,7 @@
     [clManager setDistanceFilter:(100)];
     [clManager setDelegate:self];
     [clManager setActivityType:CLActivityTypeAutomotiveNavigation];
+    [clManager setDesiredAccuracy:kCLLocationAccuracyBest];
     
     
 
@@ -118,7 +120,7 @@
 - (IBAction)showProfileVC:(id)sender {
     CGAffineTransform  myTransform ;
     
-    if (isShowProfileVC){
+    if (isShowProfileView){
         
         [profileVC hiddeProfileVC];
         myTransform = CGAffineTransformIdentity;
@@ -152,21 +154,21 @@
         _arrowImage.transform = myTransform;
     } completion:nil];
     
-    isShowProfileVC = !isShowProfileVC;
+    isShowProfileView = !isShowProfileView;
     
 }
 -(void)showListVC{
     CGFloat leading = 0;
     
-    if(isShowListVC){
+    if(isShowListView){
         leading = -self.view.bounds.size.width-10;
-        isShowListVC = false;
+        isShowListView = false;
         [detailVC updateUbikeStatus];
         [self.view endEditing:true];
         
     }else{
         
-        isShowListVC = true;
+        isShowListView = true;
         [listVC updateTableView];
         
         __weak ViewController *weakSelf = self;
@@ -187,6 +189,7 @@
 }
 
 -(void)refreshBikesData{
+    
      [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
     if (youBikesReach == nil || [youBikesReach currentReachabilityStatus] == 0){
         
@@ -205,7 +208,7 @@
          
          [SVProgressHUD dismiss];
        
-         NSLog(@"----downloadok-----");
+        
         
             if (error == nil){
         
@@ -213,8 +216,8 @@
            
             dispatch_async(dispatch_get_main_queue(), ^{
                  [self addBikesLocationOnMap];
-                if(isShowListVC)[listVC updateTableView];
-                if(isShowDetailVC)[detailVC updateUbikeStatus];
+                if(isShowListView)[listVC updateTableView];
+                if(isShowDetailView)[detailVC updateUbikeStatus];
             });
         }
     }];
@@ -227,7 +230,7 @@
         return;
     }
     
-    NSLog(@"-----calculateDistance-----");
+    
     
     for (BikeModel * bike in  bikesManager.bikes) {
        
@@ -277,13 +280,13 @@
 
 #pragma mark - CLLocationManagerDelegate
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations{
-     NSLog(@"----updatelocation-----");
-    if((!isShowDetailVC || isShowListVC)&& bikesManager.bikes.count != 0 ){
+    
+    if((!isShowDetailView || isShowListView)&& bikesManager.bikes.count != 0 ){
         
         [self calculateDistance:locations.firstObject];
         
         dispatch_async(dispatch_get_main_queue(), ^{
-             if(isShowDetailVC)[detailVC updateUbikeStatus];
+             if(isShowDetailView)[detailVC updateUbikeStatus];
         });
         
        
@@ -296,7 +299,7 @@
      [self moveContainerView: _detailContainerTop target:-_detailContainer.frame.size.height-10];
      CGAffineTransform transform_4 = CGAffineTransformIdentity;
      view.transform = transform_4;
-     isShowDetailVC = false;
+     isShowDetailView = false;
     
     
 }
@@ -307,7 +310,7 @@
     BikeModel * myBike = [(CustomAnnotationView*)view bike];
     CGAffineTransform transform_4 = CGAffineTransformScale(view.transform,1.3,1.3);
     view.transform = transform_4;
-    isShowDetailVC = true;
+    isShowDetailView = true;
      [self moveContainerView: _detailContainerTop target:10];
     
     detailVC.bike = myBike;

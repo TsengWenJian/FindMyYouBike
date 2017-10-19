@@ -21,11 +21,15 @@
 
 @implementation DetailViewController
 
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [[self.view layer ] setShadowOffset:CGSizeMake(1, 1)];
     [[self.view layer]setShadowColor:[UIColor blackColor].CGColor];
+    
     
     for (UIView * containView in _containerLabelViews){
         [containView layer].cornerRadius = 5;
