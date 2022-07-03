@@ -1,0 +1,123 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+ENV['DELIVER_ITMSTRANSPORTER_ADDITIONAL_UPLOAD_PARAMETERS'] = '-t Signiant' 
+
+default_platform(:ios)
+
+platform :ios do
+
+    desc "將正式台打包到AppStore準備送審"
+    desc "參數:scheme, version_number, build_number, identifier"
+    lane :release do |options|
+
+        # Target Name
+        scheme = "FindMyYouBike"
+        # 大版號
+        verNum = "1.0.1"
+        # 小版號
+        buildNum = "1"
+        # Bundle identifier
+        identifier = "com.Nick.FindMyYouBike"
+
+        # 設定版號
+        increment_version_number_in_plist(target: scheme ,version_number: verNum)
+        increment_build_number_in_plist(target: scheme ,build_number: buildNum)
+
+        
+        # 透過金鑰登入Store
+        api_key = app_store_connect_api_key(
+            key_id: "87HYMDWBH5",
+            issuer_id: "69a6de94-fd02-47e3-e053-5b8c7c11a4d1",
+            key_filepath: "/Users/nick/AuthKey/AuthKey_87HYMDWBH5.p8",
+            duration: 500, # optional (maximum 1200)
+            in_house: false # optional but may be required if using match/sigh
+        )
+        
+        # 取得描述檔 sigh
+        sigh(app_identifier: identifier, force: true, skip_certificate_verification: true, api_key: api_key)
+	
+        # 打包App
+        build_app(workspace: "FindMyYouBike.xcworkspace", scheme: scheme, include_bitcode: true)
+
+        # 上傳至app_store
+        upload_to_app_store(skip_metadata: true, skip_screenshots: true, api_key: api_key, precheck_include_in_app_purchases: false)
+
+    end
+
+
+    desc "選擇打包Prod,IT,WS打包上傳到Fabric及蒲公英"
+    desc "參數:scheme, version_number, build_number, identifier, build_ID"
+    lane :beta do |options|
+      begin         
+        # Target Name
+	    scheme = options[:"scheme"]
+        # 大版號
+	    verNum = options[:"version_number"]
+        # 小版號
+	    buildNum = options[:"build_number"]
+        # Bundle identifier
+	    identifier = options[:"identifier"]
+        # Jenkins Job 建置號碼
+        buildID = options[:"build_ID"]
+       
+        # 設定版號
+        increment_version_number_in_plist(target: scheme ,version_number: verNum)
+        increment_build_number_in_plist(target: scheme ,build_number: buildNum)
+        
+        # 透過金鑰登入Store
+        api_key = app_store_connect_api_key(
+            key_id: "264BD637KQ",
+            issuer_id: "69a6de74-e9b8-47e3-e053-5b8c7c11a4d1",
+            key_filepath: "/Users/admin/AuthKeys/AuthKey_264BD637KQ.p8",
+            duration: 500, # optional (maximum 1200)
+            in_house: false # optional but may be required if using match/sigh
+        )
+        
+        # 取得描述檔 sigh
+       	sigh(app_identifier: identifier, force: true, development: true, include_all_certificates: true, api_key: api_key)
+        sigh(app_identifier: "tw.com.eztravel.ezTravelApp.NotificationService", force: true, development: true, include_all_certificates: true, api_key: api_key)
+        sigh(app_identifier: "tw.com.eztravel.ezTravelApp.NotificationContent", force: true, development: true, include_all_certificates: true, api_key: api_key)
+	
+        # 打包App
+        build_app(scheme: scheme, workspace:"EzApp.xcworkspace", include_symbols: false,
+        include_bitcode: false, export_method: "development")
+	
+	if identifier != "tw.com.eztravel.ezTravelApp" 
+        # 上傳firebase_app_distribution
+        # Firebase AppID 識別碼
+        app = options[:"app"]
+        # 發送給測試人員(信箱)
+        testers = options[:"testers"]
+        # 發送給測試群組
+        groups = options[:"groups"]
+        # 發佈訊訊
+        notes = options[:"notes"]
+       	firebase_app_distribution(
+              app: app,
+              testers: testers,
+              groups: groups,
+              release_notes: notes,
+              firebase_cli_token: "1//0eJQLCu3H95bhCgYIARAAGA4SNwF-L9Ir2gydd_JljJlxIrkXEyY-1loHCITixziiUCpvjxDeFSnYwQsEGU09IcsOcaOxEq3mi38"
+          )
+	end
+      rescue => exception
+      	 slack(message: "Lane failed with exception : #{exception}", success: false, slack_url:"https://hooks.slack.com/services/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")
+      end
+    end
+	
+end
