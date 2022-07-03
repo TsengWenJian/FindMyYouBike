@@ -151,7 +151,7 @@
         
     }
     [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-        _arrowImage.transform = myTransform;
+        self->_arrowImage.transform = myTransform;
     } completion:nil];
     
     isShowProfileView = !isShowProfileView;
@@ -212,12 +212,12 @@
         
             if (error == nil){
         
-            [self calculateDistance:[clManager location]];
+                [self calculateDistance:[self->clManager location]];
            
             dispatch_async(dispatch_get_main_queue(), ^{
                  [self addBikesLocationOnMap];
-                if(isShowListView)[listVC updateTableView];
-                if(isShowDetailView)[detailVC updateUbikeStatus];
+                if(self->isShowListView)[listVC updateTableView];
+                if(self->isShowDetailView)[detailVC updateUbikeStatus];
             });
         }
     }];
@@ -286,7 +286,7 @@
         [self calculateDistance:locations.firstObject];
         
         dispatch_async(dispatch_get_main_queue(), ^{
-             if(isShowDetailView)[detailVC updateUbikeStatus];
+            if(self->isShowDetailView)[self->detailVC updateUbikeStatus];
         });
         
        

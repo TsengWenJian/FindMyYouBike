@@ -42,7 +42,7 @@
 
     
     [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-        _profileTableViewTop.constant = 0;
+        self->_profileTableViewTop.constant = 0;
         self.shadowView.alpha = 0.65;
         [self.view layoutIfNeeded];
     } completion:nil];

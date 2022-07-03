@@ -69,9 +69,8 @@
    
     NSDictionary *dict = @{@"limit":@"1000"};
     NSURL *URL = [NSURL URLWithString:YOUBIKE_URL];
-    [manager GET:URL.absoluteString parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-        [_bikes removeAllObjects];
+    [manager GET:URL.absoluteString parameters:dict headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [self->_bikes removeAllObjects];
         
         
         if([responseObject isKindOfClass:[NSDictionary class]]){
@@ -81,20 +80,18 @@
             if (result != nil){
                 for (NSDictionary * dictBike in result) {
                     BikeModel * bike =  [[BikeModel alloc] initWithDict:dictBike];
-                    [_bikes addObject:bike];
+                    [self->_bikes addObject:bike];
                 }
             }
 
             done(nil);
         }
-      
-
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-
+        
         NSLog(@"download error: %@",error.localizedDescription);
         done(error);
-
     }];
+
 }
 
 -(NSArray*)sortedBikesWithDistance:(NSArray *)bikes{

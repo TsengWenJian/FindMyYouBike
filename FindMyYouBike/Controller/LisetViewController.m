@@ -74,7 +74,7 @@
     }
     [_listTableView reloadData];
     [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-        _searchBarTop.constant = sender.selectedSegmentIndex == 0 ? -50:0;
+        self->_searchBarTop.constant = sender.selectedSegmentIndex == 0 ? -50:0;
         [self.view layoutIfNeeded];
         
     } completion:nil];

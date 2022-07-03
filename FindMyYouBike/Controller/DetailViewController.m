@@ -63,11 +63,11 @@
         
         if([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"comgooglemaps://"]]){
             
-            url = [NSURL URLWithString:[NSString stringWithFormat:@"comgooglemaps://?daddr=%f,%f&directionsmode=walking",_bike.lat,_bike.lon]];
+            url = [NSURL URLWithString:[NSString stringWithFormat:@"comgooglemaps://?daddr=%f,%f&directionsmode=walking",self->_bike.lat,_bike.lon]];
             
         }else{
             
-            url = [NSURL URLWithString:[NSString stringWithFormat:@"https://maps.google.com/?daddr=%f,%f&directionsmode=walking",_bike.lat,_bike.lon]];
+            url = [NSURL URLWithString:[NSString stringWithFormat:@"https://maps.google.com/?daddr=%f,%f&directionsmode=walking",self->_bike.lat,_bike.lon]];
         }
         
         [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:^(BOOL success) {
@@ -78,7 +78,7 @@
     UIAlertAction * apple = [UIAlertAction actionWithTitle:@"開啟 地圖導航" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         
         
-        CLLocationCoordinate2D targetCoord = CLLocationCoordinate2DMake(_bike.lat, _bike.lon);
+        CLLocationCoordinate2D targetCoord = CLLocationCoordinate2DMake(self->_bike.lat, _bike.lon);
         MKPlacemark *targetPlace = [[MKPlacemark alloc] initWithCoordinate:targetCoord];
         MKMapItem * targetMapItem = [[MKMapItem alloc] initWithPlacemark:targetPlace];
         [targetMapItem openInMapsWithLaunchOptions:@{MKLaunchOptionsDirectionsModeKey:MKLaunchOptionsDirectionsModeWalking}];
